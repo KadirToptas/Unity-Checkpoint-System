@@ -7,12 +7,14 @@ using UnityEngine.SceneManagement;
 public class Hero_Controller : MonoBehaviour
 {
     [SerializeField] private Rigidbody2D rb;
+    [SerializeField] private Vector2[] _checkPoints;
+    public static Vector2 _lastTransform;
     [SerializeField] private float moveSpeed;
 
     private Vector2 _move;
     void Start()
     {
-        
+        transform.position = _lastTransform;
     }
 
     
